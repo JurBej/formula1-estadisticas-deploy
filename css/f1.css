@@ -1,5 +1,43 @@
-/* CSS HEADER */
+/* ESTILOS GENERALES BODY-MAIN... */
+main {
+    margin-top: -8px;
+    background-color: #2D2D45;
+    height: 100vh;
+}
 
+
+/* CSS HEADER */
+.navbar-nav .nav-link {
+    font-size: 22px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+}
+
+.navbar-nav .nav-link:hover {
+    font-weight: 900;
+    color: black;
+}
+
+.icono-navbar {
+    width: 4%;
+    margin-right: 20px;
+}
+
+.titulos-header {
+    margin-top: 75px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #2D2D45;
+    color: white;
+}
+
+.titulos-header h1 {
+    font-weight: 800;
+    font-size: 60px;
+}
+
+.titulos-header h4 {
+    font-style: italic;
+}
 
 
 /* CSS CARTA */
