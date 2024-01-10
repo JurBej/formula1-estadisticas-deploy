@@ -20,6 +20,7 @@ main {
 .icono-navbar {
     width: 4%;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 .titulos-header {
@@ -39,6 +40,11 @@ main {
     font-style: italic;
 }
 
+form i {
+    font-size: 30px;
+    padding-right: 12px;
+    margin-top: 4px;
+}
 
 /* CSS CARTA */
 
