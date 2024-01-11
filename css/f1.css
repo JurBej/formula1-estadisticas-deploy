@@ -69,12 +69,13 @@ form i {
     transition: all 0.3s;
     font-family: 'Formula 1';
     overflow: hidden;
-    width: 18rem;
+    width: 22rem;
 }
 
 .card:hover {
     border-color: red;
     transform: scale(1.05);
+    box-shadow: 0 0 15px 0 rgba(255, 0, 0, 0.5);
 }
 
 .card-body {
@@ -96,10 +97,6 @@ form i {
 
 
 /* CSS INDEX.HTML */
-
-
-
-/* CSS PILOTOS */
 .letrasIndex{
     font-size: 2em;
     font-weight: 700;
@@ -115,12 +112,26 @@ form i {
     padding-bottom: 220px;
 }
 
+.imgPilotos, .imgEquipos{
+    width: 150px;
+    height: auto;
+}
+
+
+/* CSS PILOTOS */
+.main-pilotos{
+    margin-top: -25px;
+}
+
+
 
 
 
 /* CSS EQUIPOS */
 
-
+.main-equipos {
+    margin-top: -25px;
+}
 
 
 

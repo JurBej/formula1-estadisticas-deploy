@@ -54,7 +54,34 @@ async function loadData() {
 
       });
 
-      
+      dataEquipos.forEach(element => {
+        if(element.position==1){
+            let nombreEquipo1=document.getElementById('nombreEquipo1');
+            nombreEquipo1.innerHTML=element.team.name;
+            let imagenEquipo1=document.getElementById('imgEquipo1');
+            imagenEquipo1.src=element.team.logo;
+            let puntosEquipo1=document.getElementById('puntosEquipo1');
+            puntosEquipo1.innerHTML='Puntos: '+element.points;
+        }
+
+        if(element.position==2){
+            let nombreEquipo2=document.getElementById('nombreEquipo2');
+            nombreEquipo2.innerHTML=element.team.name;
+            let imagenEquipo2=document.getElementById('imgEquipo2');
+            imagenEquipo2.src=element.team.logo;
+            let puntosEquipo2=document.getElementById('puntosEquipo2');
+            puntosEquipo2.innerHTML='Puntos: '+element.points;
+        }
+
+        if(element.position==3){
+            let nombreEquipo3=document.getElementById('nombreEquipo3');
+            nombreEquipo3.innerHTML=element.team.name;
+            let imagenEquipo3=document.getElementById('imgEquipo3');
+            imagenEquipo3.src=element.team.logo;
+            let puntosEquipo3=document.getElementById('puntosEquipo3');
+            puntosEquipo3.innerHTML='Puntos: '+element.points;
+        }
+      })
   
     } catch (error) {
       console.error('Error al cargar el archivo JSON:', error);

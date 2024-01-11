@@ -1,88 +1,66 @@
-/*try {
-    
-
-    //const respuesta=await fetch(url);
-
-    if (!equipos.ok) {
-        throw `Error ${respuesta.status} de la BBDD: ${respuesta.statusText}`
-    }
-
-    
-
-} catch (error) {
-    console.log(error);
-}*/
 document.addEventListener("DOMContentLoaded", async () => {
     try {
         const jsonFilePath = 'ficheros/teams.json';
-  
-      
-      const response = await fetch(jsonFilePath);
-  
-      
-      if (!response.ok) {
-          throw new Error(`Error al cargar el archivo JSON. Código de estado: ${response.status}`);
-      }
-      
-      const data = await response.json();
-  
-      console.log(data);
+        const response = await fetch(jsonFilePath);
 
-      const cartasContainer = document.getElementById("containerCartas")
+        if (!response.ok) {
+            throw new Error(`Error al cargar el archivo JSON. Código de estado: ${response.status}`);
+        }
 
-      data.forEach(team => {
-        const colDiv = document.createElement('div');
-        colDiv.classList.add('col-md-4');
+        const data = await response.json();
 
-        const cardDiv = document.createElement('div');
-        cardDiv.classList.add('card');
+        const cartasContainer = document.getElementById("containerCartas");
 
-        const cardImg = document.createElement('img');
-        cardImg.classList.add('card-img-top');
-        cardImg.src = carta.driver.image;
-        cardImg.alt = carta.driver.name;
+        // Nueva fila
+        let currentRow;
 
-        const cardBodyDiv = document.createElement('div');
-        cardBodyDiv.classList.add('card-body');
+        data.forEach((carta, index) => {
+            
+            if (index % 3 === 0) {
+                currentRow = document.createElement('div');
+                currentRow.classList.add('row');
+                cartasContainer.appendChild(currentRow);
+            }
 
-        const cardTitle = document.createElement('h5');
-        cardTitle.classList.add('card-title');
-        cardTitle.innerHTML = ` ${carta.driver.name}`;
+            const colDiv = document.createElement('div');
+            colDiv.classList.add('col-md-4');
 
-        const listGroupUl = document.createElement('ul');
-        listGroupUl.classList.add('list-group', 'list-group-flush');
+            const cardDiv = document.createElement('div');
+            cardDiv.classList.add('card');
 
-        const listGroupItems = ['nombre', 'presidente', 'World Champions'];
-        listGroupItems.forEach(item => {
-            const li = document.createElement('li');
-            li.classList.add('list-group-item');
-            li.innerHTML = `<strong>${item.charAt(0).toUpperCase() + item.slice(1)}</strong>: ${carta[item]}`;
-            listGroupUl.appendChild(li);
+            const cardImg = document.createElement('img');
+            cardImg.classList.add('card-img-top');
+            cardImg.src = carta.team.logo;
+            cardImg.alt = carta.team.name;
+
+            const cardBodyDiv = document.createElement('div');
+            cardBodyDiv.classList.add('card-body');
+
+            const cardTitle = document.createElement('h5');
+            cardTitle.classList.add('card-title');
+            cardTitle.innerHTML = ` ${carta.team.name}`;
+
+            const listGroupUl = document.createElement('ul');
+            listGroupUl.classList.add('list-group', 'list-group-flush');
+
+            const listGroupItems = ['puntos', 'posicion'];
+            listGroupItems.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.innerHTML = `<strong>${item.charAt(0).toUpperCase() + item.slice(1)}</strong>: ${item === 'posicion' ? carta.position : item === 'nombre' ? carta.team.name : item === 'puntos' ? carta.points : carta.team[item] || "N/A"}`;
+                listGroupUl.appendChild(li);
+            });
+
+            cardBodyDiv.appendChild(cardTitle);
+            cardDiv.appendChild(cardImg);
+            cardDiv.appendChild(cardBodyDiv);
+            cardDiv.appendChild(listGroupUl);
+            colDiv.appendChild(cardDiv);
+
+            
+            currentRow.appendChild(colDiv);
         });
-
-        // Construye la estructura de la carta
-        cardBodyDiv.appendChild(cardTitle);
-        cardDiv.appendChild(cardImg);
-        cardDiv.appendChild(cardBodyDiv);
-        cardDiv.appendChild(listGroupUl);
-        colDiv.appendChild(cardDiv);
-
-        // Agrega la columna al contenedor
-        cartasContainer.appendChild(colDiv);
-      });
     } catch (error) {
         console.error(error);
     }
-})
-
-/*fetch('ficheros/teams.json')
-    .then(response => {
-        if (!response.ok) {
-            throw `Error ${response.status} de la BBDD: ${response.statusText}`;
-        }
-        return response.json();
-    })
-    .then(myData => {
-        console.log(myData);
-    })
-    .catch(err => console.error(err));*/
+});

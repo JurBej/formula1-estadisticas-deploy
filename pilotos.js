@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     console.log(data);
 
-    data.forEach(carta => {
+    // Inicializa la variable para la fila actual
+    let rowDiv;
+
+    data.forEach((carta, index) => {
       // Crea elementos Bootstrap
       const colDiv = document.createElement('div');
       colDiv.classList.add('col-md-4');
@@ -42,13 +45,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       const listGroupUl = document.createElement('ul');
       listGroupUl.classList.add('list-group', 'list-group-flush');
 
-      const listGroupItems = ['equipo', 'posicion', 'puntos', 'victorias'];
-      listGroupItems.forEach(item => {
-        const li = document.createElement('li');
-        li.classList.add('list-group-item');
-        li.innerHTML = `<strong>${item.charAt(0).toUpperCase() + item.slice(1)}</strong>: ${carta[item]}`;
-        listGroupUl.appendChild(li);
-      });
+      listGroupUl.innerHTML = `
+      <li class="list-group-item"><strong>Equipo</strong>: ${carta.team.name}</li>
+      <li class="list-group-item"><strong>Posición</strong>: ${carta.position}</li>
+      <li class="list-group-item"><strong>Puntos</strong>: ${carta.points}</li>
+      <li class="list-group-item"><strong>Temporada</strong>: ${carta.season}</li>`;
 
       // Construye la estructura de la carta
       cardBodyDiv.appendChild(cardTitle);
@@ -57,8 +58,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       cardDiv.appendChild(listGroupUl);
       colDiv.appendChild(cardDiv);
 
-      // Agrega la columna al contenedor
-      cartasContainer.appendChild(colDiv);
+       // Crea una nueva fila cada vez que se completa una fila de tres cartas
+       if (index % 3 === 0) {
+        rowDiv = document.createElement('div');
+        rowDiv.classList.add('row');
+      }
+
+      // Agrega la columna a la fila actual
+      rowDiv.appendChild(colDiv);
+
+      // Agrega la fila al contenedor de cartas cuando se completa
+      if ((index + 1) % 3 === 0 || index === data.length - 1) {
+        cartasContainer.appendChild(rowDiv);
+      }
     });
 
   } catch (error) {
