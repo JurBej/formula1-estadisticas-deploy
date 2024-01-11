@@ -105,9 +105,16 @@ form i {
     font-weight: 700;
 }
 
-#imgPiloto{
-    width: 100px;
+.imgPilotos{
+    height:700px;
+    padding-bottom: 220px;
 }
+
+.imgEquipos{
+    height:700px;
+    padding-bottom: 220px;
+}
+
 
 
 
