@@ -30,6 +30,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const cardImg = document.createElement('img');
             cardImg.classList.add('card-img-top');
+
+            if(carta.team.name=="Scuderia Ferrari"){
+                cardImg.classList.add('ferrari');
+            }
+            
             cardImg.src = carta.team.logo;
             cardImg.alt = carta.team.name;
 

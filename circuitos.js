@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       listGroupUl.innerHTML = `
       <li class="list-group-item"><strong>Localización</strong>: ${carta.competition.location.country}</li>
-      <li class="list-group-item"><strong>País</strong>: ${carta.distance}</li>`;
+      <li class="list-group-item"><strong>Distancia</strong>: ${carta.distance}</li>`;
 
       // Construye la estructura de la carta
       cardBodyDiv.appendChild(cardTitle);
