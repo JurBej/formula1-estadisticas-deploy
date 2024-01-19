@@ -13,6 +13,12 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
+                <!-- Imagen a la izquierda del navbar -->
+                <img class="icono-navbar d-lg-none img-movil" src="img/icono-navbar.png" alt="Fórmula 1">
+                <!-- Botón para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto text-center mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -29,11 +35,11 @@
                         </li>
                     </ul>
                     <!-- Imagen a la derecha del navbar -->
-                    <img class="icono-navbar" src="img/icono-navbar.png" alt="Fórmula 1">
+                    <img class="icono-navbar icono-navbar-mobile" src="img/icono-navbar.png" alt="Fórmula 1">
                 </div>
             </div>
         </nav>
-        <div class="titulos-header">
+        <div class="titulos-header custom-margin">
             <h1>Estadísticas Fórmula 1</h1>
             <h4>Season 2023</h4>
         </div>
@@ -49,7 +55,7 @@
             <div class="carousel-inner" id="carrusel">
               <div class="carousel-item active">
                 <img src="" id="imgPiloto" class="d-block w-100 imgPilotos" alt="Primer Clasificado" >
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption custom-h5-pilotos d-md-block">
                   <h5 class="letrasIndex">🥇Primer Clasificado</h5>
                   <p id="nombrePiloto" class="letrasIndex"></p>
                   <p id="puntosPiloto" class="letrasIndex"></p>
@@ -57,7 +63,7 @@
               </div>
               <div class="carousel-item">
                 <img src="" id="imgPiloto2" class="d-block w-100 imgPilotos" alt="Segundo Clasificado">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption custom-h5-pilotos d-md-block">
                   <h5 class="letrasIndex">🥈Segundo clasificado</h5>
                   <p id="nombrePiloto2" class="letrasIndex"></p>
                   <p id="puntosPiloto2" class="letrasIndex"></p>
@@ -65,7 +71,7 @@
               </div>
               <div class="carousel-item">
                 <img src="" id="imgPiloto3" class="d-block w-100 imgPilotos" alt="Tercer Clasificado">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption custom-h5-pilotos d-md-block">
                   <h5 class="letrasIndex">🥉Tercer clasificado</h5>
                   <p id="nombrePiloto3" class="letrasIndex"></p>
                   <p id="puntosPiloto3" class="letrasIndex"></p>
@@ -91,25 +97,25 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="" id="imgEquipo1" class="d-block w-100 imgEquipos" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="letrasIndex">🥇Primer equipo</h5>
+                <img src="" id="imgEquipo1" class="d-block w-100 imgEquipos" alt="Primer Clasificado">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="letrasIndex custom-h5">🥇Primer equipo</h5>
                   <p id="nombreEquipo1" class="letrasIndex"></p>
                   <p id="puntosEquipo1" class="letrasIndex"></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="" id="imgEquipo2" class="d-block w-100 imgEquipos" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="letrasIndex">🥈Segundo equipo</h5>
+                <img src="" id="imgEquipo2" class="d-block w-100 imgEquipos" alt="Segundo Clasificado">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="letrasIndex custom-h5">🥈Segundo equipo</h5>
                   <p id="nombreEquipo2" class="letrasIndex"></p>
                   <p id="puntosEquipo2" class="letrasIndex"></p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="" id="imgEquipo3" class="d-block w-100 imgEquipos" alt="">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5 class="letrasIndex">🥉Tercer equipo</h5>
+                <img src="" id="imgEquipo3" class="d-block w-100 imgEquipos" alt="Tercer Clasificado">
+                <div class="carousel-caption d-md-block">
+                  <h5 class="letrasIndex custom-h5">🥉Tercer equipo</h5>
                   <p id="nombreEquipo3" class="letrasIndex"></p>
                   <p id="puntosEquipo3" class="letrasIndex"></p>
                 </div>

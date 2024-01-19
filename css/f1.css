@@ -30,6 +30,40 @@ main {
     margin-left: 20px;
 }
 
+@media (max-width: 576px) {
+    .custom-margin {
+      margin-top: 25px !important; /* Importante para anular cualquier estilo anterior */
+    }
+
+    main {
+        margin-top: -10px;
+    }
+
+    .letrasIndex {
+        margin-top: -20px;
+    }
+
+    .custom-h5 {
+        margin-bottom: 25px;
+    }
+
+    .custom-h5-pilotos h5 {
+        white-space: nowrap;
+        position: relative;
+        top: -20px;
+    }
+
+    .img-movil {
+        max-width: 100%;
+        height: auto;
+        width: 11%;
+    }
+
+    .icono-navbar-mobile {
+        display: none;
+    }
+}
+
 .titulos-header {
     margin-top: 65px;
     padding-top: 35px;
