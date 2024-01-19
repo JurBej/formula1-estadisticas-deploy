@@ -15,8 +15,8 @@ main {
 
 /* CSS HEADER */
 .navbar-nav .nav-link {
-    font-size: 22px; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .navbar-nav .nav-link:hover {
