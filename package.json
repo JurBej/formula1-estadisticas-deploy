@@ -1,0 +1,13 @@
+{
+  "name": "formula1-estadisticas-deploy",
+  "version": "1.0.0",
+  "description": "Proyecto realizado por Ángel Jurado, Jose del Pino y Alejandro Jurado en 2ºDAW del IES Jándula 23-24. \r Muestra las estadísticas de F1 consumiendo una API, dicha información de la API se encuentra dentro del directorio \"ficheros\" en archivos .json debido a que la API es de pago.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo 'No build needed'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

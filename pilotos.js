@@ -20,7 +20,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Inicializa la variable para la fila actual
     let rowDiv;
 
-    // Función para crear las cartas
+      /**
+       * Función para crear las cartas
+       * @param {Object} carta Elemento a construir
+       */
     const createCard = (carta) => {
       // Crea elementos Bootstrap
       const colDiv = document.createElement('div');
@@ -47,8 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       listGroupUl.innerHTML = `
         <li class="list-group-item"><strong>Equipo</strong>: ${carta.team.name}</li>
         <li class="list-group-item"><strong>Posición</strong>: ${carta.position}</li>
-        <li class="list-group-item"><strong>Puntos</strong>: ${carta.points}</li>
-        <li class="list-group-item"><strong>Temporada</strong>: ${carta.season}</li>`;
+        <li class="list-group-item"><strong>Puntos</strong>: ${carta.points}</li>`;
 
       // Construye la estructura de la carta
       cardBodyDiv.appendChild(cardTitle);
@@ -61,7 +63,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       rowDiv.appendChild(colDiv);
     };
 
-    // Función para construir todas las cartas
+      /**
+       * Función para construir todas las cartas
+       * @param {Array} dataArray Elementos a construir
+       */
     const buildAllCards = (dataArray) => {
       dataArray.forEach((carta, index) => {
         // Crea una nueva fila cada vez que se completa una fila de tres cartas

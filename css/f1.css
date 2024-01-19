@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Formula 1';
     src: url('../fonts/Formula1-Regular-1.ttf');
-  }
+}
 
 /* ESTILOS GENERALES BODY-MAIN... */
 main {
@@ -10,14 +10,7 @@ main {
     background-color: #2D2D45;
     padding-bottom: 80px;
     box-sizing: border-box; /* Esto asegura que el padding no afecte al ancho y alto total */
-    min-height: 77vh;
-}
-
-.top-3{
-    color: white;
-    text-align: center;
-    padding-top: 50px;
-    font-family: 'Formula 1';
+    min-height: 79vh;
 }
 
 /* CSS HEADER */
@@ -84,12 +77,12 @@ form i {
 }
 
 .list-group-item {
-  border-bottom: none;
-  font-family: 'Formula 1';
+    border-bottom: none;
+    font-family: 'Formula 1';
 }
 
 .ap {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 /* CSS INDEX.HTML */
@@ -98,63 +91,31 @@ form i {
     font-weight: 700;
 }
 
-.imgPilotos{
-    height:700px;
-    padding-bottom: 220px;
-}
-
-.imgEquipos{
-    height:700px;
-    padding-bottom: 220px;
-}
-
 .imgPilotos, .imgEquipos{
-    width: 150px;
     height: auto;
+    padding-bottom: 220px;
 }
-
 
 /* CSS PILOTOS */
 .main-pilotos{
     margin-top: -25px;
 }
 
-
-
-
-
 /* CSS EQUIPOS */
-
 .ferrari{
     height: 196px;
 }
 
-
-/* CSS CIRCUITOS */
-/* .main-circuitos {
-    height: 100vh;
-    margin-top: -25px;
-    background-color: #2D2D45;
-    width: 100%;
-    height: 100%;
-} */
-
-body{
-    background-color: #2D2D45;
-    margin: 0;
-    padding: 0;
+/* CSS CARRUSEL */
+.top-3{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Formula 1';
 }
 
-
-
-/* CSS CARRUSEL */
 #carouselExampleCaptions, #carouselExampleCaptions2{
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
     padding-top: 50px;
-}
-
-#imgPrueba{
-    width: 300px;
-    width: auto;
 }
