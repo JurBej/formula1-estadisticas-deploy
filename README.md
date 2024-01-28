@@ -6,4 +6,5 @@ En él se muestran las estadísticas de la temporada 2023 de la F1 consumiendo u
 ## Stack
 JavaScript, Ajax, HTML, CSS y Bootstrap.
 
+## Contribuciones
 Proyecto realizado por Ángel Jurado, Jose del Pino y Alejandro Jurado en 2ºDAW del IES Jándula 23-24. 
